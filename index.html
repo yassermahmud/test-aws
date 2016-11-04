@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myFirstApp">
+<head>
+  <base href="/">
+  <title>My First App</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body ng-controller="myFirstAppController">
+
+  <div ng-include="'views/header.html'"></div>
+
+  <form>
+    <label for="myText">Text</label>
+    <input type="text" id="myText" ng-model="myText"/>
+    <button ng-click="changeText()">My button</button>
+  </form>
+  <div>
+    {{myText}}, 
+    {{newText}},,
+    {{otherText()}}
+  </div>
+  <ng-view></ng-view>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="controller.js"></script>
+</body>
+</html>
