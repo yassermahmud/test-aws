@@ -1,6 +1,6 @@
 var express = require('express')
 var app = express();
-var port = 80
+var port = 3000
 app.use(express.static(__dirname));
 app.get('*', function(req, res) {
   res.sendFile('index.html', { root: __dirname });
